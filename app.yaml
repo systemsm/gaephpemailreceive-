@@ -1,0 +1,15 @@
+application: cekprogram
+version: 1
+runtime: php
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /_ah/mail/.+
+  script: cobaphp.php
+
+- url: /.*
+  script: coba.php
+
+inbound_services:
+- mail
